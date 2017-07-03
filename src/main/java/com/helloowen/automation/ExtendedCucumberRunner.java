@@ -1,6 +1,5 @@
 package com.helloowen.automation;
 
-import com.helloowen.automation.utils.ZipCompress;
 import cucumber.api.junit.Cucumber;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
@@ -33,7 +32,6 @@ public class ExtendedCucumberRunner extends Cucumber {
 
         Reportable report = new ReportBuilder(jsonReports, new Configuration(reportDirectory, buildProject)).generateReports();
 
-        ZipCompress.compress("target/cucumber-html-reports");
         //fail build if got any failed scenarios
         if (report.getFailedScenarios() > 0) {
             System.exit(1);
