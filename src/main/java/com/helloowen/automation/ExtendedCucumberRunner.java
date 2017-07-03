@@ -12,7 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Properties;
 
 public class ExtendedCucumberRunner extends Cucumber {
     public ExtendedCucumberRunner(Class clazz) throws InitializationError, IOException {
@@ -21,14 +20,8 @@ public class ExtendedCucumberRunner extends Cucumber {
 
     @Override
     public void run(RunNotifier notifier) {
-        setProperties();
         super.run(notifier);
         generateReport();
-    }
-
-    private void setProperties() {
-        Properties props = System.getProperties();
-        props.setProperty("selenide.browser", "chrome");
     }
 
     private void generateReport() {
@@ -36,7 +29,7 @@ public class ExtendedCucumberRunner extends Cucumber {
         String json = "target/cucumber.json";
         jsonReports.add(json);
         File reportDirectory = new File("target");
-        String buildProject = "Qrious Tourism";
+        String buildProject = "Web Automation Template";
 
         Reportable report = new ReportBuilder(jsonReports, new Configuration(reportDirectory, buildProject)).generateReports();
 
