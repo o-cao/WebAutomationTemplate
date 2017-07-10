@@ -12,18 +12,15 @@ import static com.codeborne.selenide.Selenide.$;
 public class GmailPage {
 
     public void openGmailHomePage() {
-        Selenide.open("https://www.google.com/gmail/about/");
+        Selenide.open("https://enterprise.stormpath.io/login");
     }
 
     public void login() {
-        $(by("type", "email")).setValue("automation.test.template@gmail.com");
-        $(byText("Next")).click();
-        $(by("type", "password")).setValue("Automation123");
-        $(byText("Next")).click();
-    }
+        $("#tenantNameKey").setValue("wonderful-cannon");
+        $("#email").setValue("owen.cao@sparkventures.co.nz");
+        $("#password").setValue("");
 
-    public void clickLoginButton() {
-        $(".gmail-nav__nav-link__sign-in").click();
+        $("#loginbutton").click();
     }
 
     public boolean inDashBoard() {

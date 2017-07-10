@@ -7,4 +7,4 @@ Feature: Gmail
   Scenario: User can check mails after login
     Given I open Gmail login page
     When I login in with my Google account
-    Then I can see inbox
+    Then I go to page
