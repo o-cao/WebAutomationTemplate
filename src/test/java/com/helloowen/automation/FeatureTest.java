@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty", "json:target/cucumber.json"},
         features = {"src/main/resources/features"},
-        glue = {"com.helloowen.automation.steps/"},
+        glue = {"com.helloowen.automation.steps"},
         tags = {"~@wip", "~@manual"}
 )
-public class TestRunner {
+public class FeatureTest {
 }

@@ -1,9 +1,11 @@
 package com.helloowen.automation.domain;
 
 public class User {
+
     private String email;
+
     private String password;
-    
+
     public String getEmail() {
         return email;
     }
@@ -19,4 +21,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
