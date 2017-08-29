@@ -13,6 +13,7 @@ public class BeforeAndAfterBehaviour {
     public void setUpWebDriver() throws Exception {
         setProperties();
         ChromeDriverManager.getInstance().setup();
+        System.out.println("================setupWebDriver================");
     }
 
     @After

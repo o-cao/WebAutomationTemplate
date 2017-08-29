@@ -1,3 +1,4 @@
+@feature2
 Feature: Compose
 
   As a Gmail user
