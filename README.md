@@ -12,7 +12,3 @@
 * You can run with FeatureTest.java which actually run with Junit Runner;
 * Or run with "mvn verify";
 * Or you can run with specified feature file directly.
-
-### Who do I talk to? ###
-
-* Any problems/comments you can check with owen.cao@hotmail.com
